@@ -1,3 +1,4 @@
+// [HARVESTED TO OTHRYS-BLOCKS] target: blocks/math/percentage-engine/index.ts | date: 2026-11-05 | status: HARVEST_RETAIN
 export const MAX = 1e12;
 export function parseNumber(raw: string): number | null {
   const value = raw.trim();
