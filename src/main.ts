@@ -228,7 +228,9 @@ shareBtn?.addEventListener('click', () => {
 });
 
 function loadHash() {
-  const p = new URLSearchParams(location.hash.slice(1));
+  const hashParams = new URLSearchParams(location.hash.slice(1));
+  const searchParams = new URLSearchParams(location.search);
+  const p = hashParams.has('mode') ? hashParams : searchParams;
   const m = p.get('mode');
   if (m !== null && /^[0-3]$/.test(m)) {
     mode = Number(m);

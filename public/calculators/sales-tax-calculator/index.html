@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#18181b"/>
+  <title>Sales Tax Calculator - Calculate Total Cost with Tax Online Free | QuickPercent</title>
+  <meta name="description" content="Calculate sales tax amount and final purchase price online for free. Clean in-browser calculator for retail, invoices, and budgeting."/>
+  <meta name="robots" content="index,follow,max-image-preview:large"/>
+  <link rel="canonical" href="https://quickpercent.othrys.be/calculators/sales-tax-calculator/"/>
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg"/>
+  <style>
+    :root {
+      --primary: #f59e0b;
+      --primary-hover: #d97706;
+      --bg: #09090b;
+      --card-bg: #18181b;
+      --text: #fafafa;
+      --text-muted: #a1a1aa;
+      --border: #27272a;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .container {
+      max-width: 820px;
+      margin: 4vh auto;
+      padding: 0 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    h1 {
+      font-size: clamp(26px, 4.5vw, 40px);
+      line-height: 1.2;
+      margin: 0 0 14px 0;
+      color: #ffffff;
+    }
+    .subtitle {
+      font-size: 18px;
+      color: var(--text-muted);
+      margin: 0 0 24px 0;
+    }
+    .cta-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      margin-bottom: 36px;
+    }
+    .start-button {
+      display: inline-block;
+      background: var(--primary);
+      color: #000000;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.15s ease-in-out, transform 0.1s ease;
+    }
+    .start-button:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+    .guarantees {
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    h2, h3 { color: #ffffff; margin-top: 0; }
+    ul, ol { padding-left: 20px; }
+    li { margin-bottom: 8px; color: var(--text-muted); }
+    li strong { color: var(--text); }
+    .formula-box {
+      background: #27272a;
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 20px 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 15px;
+      color: #fef08a;
+    }
+    .example-box {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px dashed rgba(245, 158, 11, 0.3);
+      padding: 16px;
+      border-radius: var(--radius);
+      margin: 16px 0;
+      font-size: 15px;
+      color: #fde68a;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    .faq-item p {
+      margin: 10px 0 0 0;
+      color: var(--text-muted);
+    }
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      font-size: 14px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+    footer a { color: #fbbf24; text-decoration: none; margin: 0 8px; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Sales Tax Calculator - Calculate Total Cost with Tax Online Free",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any modern web browser",
+      "url": "https://quickpercent.othrys.be/calculators/sales-tax-calculator/",
+      "description": "Calculate sales tax amount and final purchase price online for free. Clean in-browser calculator for retail, invoices, and budgeting.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "isAccessibleForFree": true,
+      "featureList": [
+        "Sales Tax & VAT Calculator",
+        "Pure client-side math calculations",
+        "Zero tracking cookies & zero server storage",
+        "High-precision floating point validation"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you calculate sales tax backward from a total price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To find the pre-tax price from a tax-inclusive total, divide the total by (1 + Tax Rate / 100). For example, $108 with 8% tax: $108 / 1.08 = $100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are calculations private?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, QuickPercent runs 100% client-side with zero network requests and zero cookies."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">Tax & Invoice Tool</span>
+      <h1>Sales Tax & VAT Calculator</h1>
+      <p class="subtitle">Determine the exact sales tax amount and gross total for any purchase, invoice, or retail transaction.</p>
+    </header>
+
+    <div class="cta-box">
+      <a href="/?mode=3&a=150&b=0" class="start-button">
+        Open Interactive Calculator ↗
+      </a>
+      <div class="guarantees">
+        ⚡ Instant Calculations · 🔒 Zero Cookies · 🆓 100% Free Forever
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2>Mathematical Formula</h2>
+      <div class="formula-box">Tax Amount = Pre-Tax Price × (Tax Rate % / 100) | Final Total = Pre-Tax Price + Tax Amount</div>
+      <h3>Step-by-Step Example</h3>
+      <div class="example-box">A $150.00 purchase with an 8.25% sales tax incurs $12.38 in tax, for a total of $162.38.</div>
+    </div>
+
+    <div class="content-card">
+      <h2>Common Use Cases</h2>
+      <ul>
+        <li><strong>Estimating final retail checkout costs before paying</strong></li>
+        <li><strong>Freelance and business invoice preparation</strong></li>
+        <li><strong>Calculating VAT (Value Added Tax) on European goods</strong></li>
+        <li><strong>Expense reimbursement receipts verification</strong></li>
+      </ul>
+    </div>
+
+    <div class="content-card">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item"><summary>How do you calculate sales tax backward from a total price?</summary><p>To find the pre-tax price from a tax-inclusive total, divide the total by (1 + Tax Rate / 100). For example, $108 with 8% tax: $108 / 1.08 = $100.</p></details>
+      <details class="faq-item"><summary>Are calculations private?</summary><p>Yes, QuickPercent runs 100% client-side with zero network requests and zero cookies.</p></details>
+    </div>
+
+    <footer>
+      <div>
+        <a href="/">QuickPercent Home</a> ·
+        <a href="https://shrinkmyphoto.othrys.be">ShrinkMyPhoto</a> ·
+        <a href="https://freeqr.othrys.be">FreeQR</a> ·
+        <a href="https://unixtime.othrys.be">UnixTime</a> ·
+        <a href="https://vintagetoycatalog.com">Vintage Toy Catalog</a>
+      </div>
+      <p style="margin-top: 12px;">© 2026 OTHRYS. Built to be useful, private, and durable.</p>
+    </footer>
+  </div>
+</body>
+</html>

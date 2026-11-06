@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://quickpercent.othrys.be/</loc></url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap><loc>https://quickpercent.othrys.be/sitemap-core.xml</loc></sitemap>
+  <sitemap><loc>https://quickpercent.othrys.be/sitemap-calculators.xml</loc></sitemap>
+</sitemapindex>
