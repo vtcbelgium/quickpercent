@@ -37,7 +37,60 @@
     "description": "Calculate percentages, shopping discounts, and percentage changes instantly in your browser with step-by-step formulas. 100% private, zero cookies.",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Any",
-    "isAccessibleForFree": true
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is Percentage of a number calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A percentage is a fraction out of 100. To find X% of Y, the formula is (X ÷ 100) × Y. For example, 15% of 200 = (15 ÷ 100) × 200 = 30."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Percentage change work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Percentage change compares a starting value to an ending value using ((New − Original) ÷ Original) × 100. If the result is positive, it represents an increase; if negative, a decrease. For example, moving from 80 to 100 is (100 − 80) ÷ 80 × 100 = +25%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are discounts and sales tax combined?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The discount percentage is applied first to find the discounted subtotal: Price × (1 − Discount ÷ 100). If an optional tax or VAT percentage is specified, it is applied directly to that discounted subtotal: Subtotal × (1 + Tax ÷ 100). Savings are displayed before tax."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use decimal commas (European format)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. QuickPercent accepts both standard period decimals (12.5) and European comma decimals (12,5). We automatically normalize them before calculation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my financial calculations private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "100% private. All computations run inside your device's browser engine using pure JavaScript. Zero requests are made to any remote server or analytics tracker."
+        }
+      }
+    ]
   }
   </script>
 </head>
