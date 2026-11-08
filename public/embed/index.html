@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Percentage Calculator Widget | QuickPercent</title>
+  <meta name="robots" content="noindex, follow">
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #1e293b;
+      --border: rgba(255,255,255,0.1);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body { background: var(--bg); color: var(--text); padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+    .calc-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+    .title { font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; font-size: 14px; }
+    input { background: #0f172a; border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; color: #fff; font-size: 14px; width: 90px; text-align: center; }
+    input:focus { outline: none; border-color: var(--accent); }
+    .res { font-weight: 700; color: #4ade80; font-size: 16px; min-width: 50px; }
+    .footer { display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--muted); padding-top: 4px; }
+    .footer a { color: var(--muted); text-decoration: none; font-weight: 600; }
+    .footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="calc-card">
+    <div class="title">Percentage of a Number</div>
+    <div class="row">
+      <span>What is</span>
+      <input type="number" id="p1" value="15" step="any">
+      <span>% of</span>
+      <input type="number" id="p2" value="250" step="any">
+      <span>? =</span>
+      <span class="res" id="r1">37.5</span>
+    </div>
+  </div>
+
+  <div class="calc-card">
+    <div class="title">Percentage Increase / Decrease</div>
+    <div class="row">
+      <span>From</span>
+      <input type="number" id="c1" value="100" step="any">
+      <span>to</span>
+      <input type="number" id="c2" value="125" step="any">
+      <span>=</span>
+      <span class="res" id="r2">+25.00%</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="https://quickpercent.othrys.be/" target="_blank" rel="noopener">⚡ Powered by QuickPercent</a>
+    <span>100% Private Client-Side</span>
+  </div>
+
+  <script>
+    function update() {
+      const p1 = parseFloat(document.getElementById('p1').value) || 0;
+      const p2 = parseFloat(document.getElementById('p2').value) || 0;
+      document.getElementById('r1').textContent = ((p1 / 100) * p2).toLocaleString(undefined, {maximumFractionDigits: 4});
+
+      const c1 = parseFloat(document.getElementById('c1').value) || 0;
+      const c2 = parseFloat(document.getElementById('c2').value) || 0;
+      if (c1 === 0) {
+        document.getElementById('r2').textContent = 'N/A';
+      } else {
+        const diff = ((c2 - c1) / Math.abs(c1)) * 100;
+        const sign = diff > 0 ? '+' : '';
+        document.getElementById('r2').textContent = sign + diff.toFixed(2) + '%';
+        document.getElementById('r2').style.color = diff >= 0 ? '#4ade80' : '#f87171';
+      }
+    }
+    document.querySelectorAll('input').forEach(i => i.addEventListener('input', update));
+    update();
+  </script>
+</body>
+</html>
