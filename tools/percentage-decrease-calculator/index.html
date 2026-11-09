@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#10b981"/>
+  <title>Percentage Decrease & Discount Calculator — Fast & Private</title>
+  <meta name="description" content="Calculate percentage decrease and price drops accurately. Formula: ((Old - New) / Old) * 100. Real-time calculations with step-by-step breakdown."/>
+  <link rel="canonical" href="https://quickpercent.othrys.be/tools/percentage-decrease-calculator/"/>
+  <link rel="search" type="application/opensearchdescription+xml" title="QuickPercent" href="/opensearch.xml" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Percentage Decrease Calculator",
+    "url": "https://quickpercent.othrys.be/tools/percentage-decrease-calculator/",
+    "description": "Calculate percentage decrease and price drops accurately. Formula: ((Old - New) / Old) * 100. Real-time calculations with step-by-step breakdown.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All modern browsers",
+    "browserRequirements": "Requires JavaScript. Runs 100% client-side locally.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0b1120; color: #f8fafc; margin: 0; padding: 24px; line-height: 1.6; }
+    .container { max-width: 820px; margin: 0 auto; }
+    h1 { font-size: 2.2rem; font-weight: 800; color: #34d399; margin-bottom: 12px; }
+    .card { background: #1e293b; border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 24px; margin: 20px 0; }
+    .input-row { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+    .input-group { flex: 1; min-width: 200px; }
+    label { display: block; font-size: 12px; font-weight: 700; color: #94a3b8; margin-bottom: 6px; text-transform: uppercase; }
+    input { width: 100%; box-sizing: border-box; background: #0f172a; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; color: #fff; font-size: 18px; font-weight: 700; }
+    .result-box { background: #064e3b; border: 1px solid #10b981; border-radius: 8px; padding: 18px; text-align: center; margin-top: 16px; }
+    .result-val { font-size: 2.4rem; font-weight: 800; color: #34d399; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th, td { padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: left; }
+    th { color: #34d399; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p style="color: #64748b; font-size: 13px;"><a href="/" style="color: #34d399; text-decoration: none;">&larr; QuickPercent Home</a> / Tools</p>
+    <h1>Percentage Decrease Calculator</h1>
+    <p style="font-size: 1.1rem; color: #94a3b8;">Compute precise percentage differences in real-time. Fast, responsive, and completely private.</p>
+
+    <div class="card">
+      <div class="input-row">
+        <div class="input-group">
+          <label>Original Value (V1)</label>
+          <input type="number" id="v1" value="100" oninput="calc()"/>
+        </div>
+        <div class="input-group">
+          <label>New Value (V2)</label>
+          <input type="number" id="v2" value="80" oninput="calc()"/>
+        </div>
+      </div>
+      <div class="result-box">
+        <div style="font-size: 13px; color: #a7f3d0; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700;">Calculated Percentage Difference</div>
+        <div class="result-val" id="res">0%</div>
+        <div id="formula" style="font-size: 13px; color: #d1fae5; margin-top: 6px;"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top: 0; color: #34d399;">Mathematical Formula &amp; Calculation Steps</h3>
+      <p>The standard formula for calculating percentage difference between two numbers is:</p>
+      <pre style="background: #0f172a; padding: 12px; border-radius: 6px; color: #6ee7b7; font-family: monospace;">Percentage Difference = ((V2 - V1) / |V1|) &times; 100%</pre>
+      <ul>
+        <li>Subtract the initial value from the final value: <code>&Delta; = V2 - V1</code></li>
+        <li>Divide the difference by the absolute value of the initial value: <code>&Delta; / |V1|</code></li>
+        <li>Multiply by 100 to convert into percentage format.</li>
+      </ul>
+    </div>
+
+    <aside id="othrys-cluster-mesh" aria-label="Documents, Writing & Math Cluster" style="max-width:960px;margin:24px auto;padding:12px 16px;font:13px/1.5 system-ui,sans-serif;text-align:center;opacity:0.85;border-top:1px solid rgba(128,128,128,0.2);"><strong>Documents, Writing &amp; Math Cluster</strong> &bull; Related Client-Side Tools: <a href="https://wordcounter.othrys.be/" style="color:inherit;text-decoration:underline;">WordCounter</a> &bull; <a href="https://fillthispdf.othrys.be/" style="color:inherit;text-decoration:underline;">FillThisPDF</a> &bull; <a href="https://unixtime.othrys.be/" style="color:inherit;text-decoration:underline;">UnixTime</a></aside>
+  </div>
+
+  <script>
+    function calc() {
+      const v1 = parseFloat(document.getElementById('v1').value);
+      const v2 = parseFloat(document.getElementById('v2').value);
+      if (isNaN(v1) || isNaN(v2) || v1 === 0) {
+        document.getElementById('res').innerText = '--';
+        document.getElementById('formula').innerText = 'Please enter valid non-zero values';
+        return;
+      }
+      const diff = v2 - v1;
+      const pct = (diff / Math.abs(v1)) * 100;
+      const sign = pct > 0 ? '+' : '';
+      document.getElementById('res').innerText = sign + pct.toFixed(2) + '%';
+      document.getElementById('formula').innerText = `((` + v2 + ` - ` + v1 + `) / ` + Math.abs(v1) + `) &times; 100 = ` + pct.toFixed(4) + `%`;
+    }
+    calc();
+  </script>
+</body>
+</html>
