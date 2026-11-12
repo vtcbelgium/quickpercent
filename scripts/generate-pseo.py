@@ -34,7 +34,7 @@ PAGES = [
             },
             {
                 "q": "Is my calculation saved or tracked?",
-                "a": "No. QuickPercent is 100% client-side and sovereign. All calculations happen inside your browser memory with zero tracking cookies and zero cloud analytics."
+                "a": "No. QuickPercent is 100% client-side and sovereign. All calculations happen inside your browser memory with zero tracking cookies and zero third-party analytics."
             }
         ],
         "use_cases": [
@@ -50,7 +50,7 @@ PAGES = [
         "a_default": "200",
         "b_default": "150",
         "title": "Percentage Decrease Calculator - Calculate % Reduction Online Free",
-        "meta_desc": "Calculate percentage decrease between two numbers online for free. Clear formula, step-by-step working, and zero trackers.",
+        "meta_desc": "Calculate percentage decrease between two numbers online for free. Clear formula, step-by-step working, and zero third-party trackers.",
         "h1": "Percentage Decrease Calculator",
         "subtitle": "Determine the exact percentage reduction or drop from an original number to a lower value.",
         "badge": "Reduction & Loss Tool",
@@ -108,7 +108,7 @@ PAGES = [
         "a_default": "18",
         "b_default": "75",
         "title": "Tip Calculator - Calculate Restaurant Gratuity & Bill Split Free",
-        "meta_desc": "Calculate restaurant tip amounts (15%, 18%, 20%) and total bill costs quickly. Free in-browser tip calculator with zero ads and zero trackers.",
+        "meta_desc": "Calculate restaurant tip amounts (15%, 18%, 20%) and total bill costs quickly. Free in-browser tip calculator with zero ads and zero tracking cookies.",
         "h1": "Tip & Gratuity Calculator",
         "subtitle": "Calculate fair tipping amounts for dining, delivery, taxi, and hospitality services in seconds.",
         "badge": "Dining & Gratuity Tool",
@@ -137,7 +137,7 @@ PAGES = [
         "a_default": "15",
         "b_default": "250",
         "title": "Percentage of a Number Calculator - What is X% of Y? Free",
-        "meta_desc": "Calculate what is X percent of any number. Fast, accurate, and completely client-side percentage calculator with zero cloud telemetry.",
+        "meta_desc": "Calculate what is X percent of any number. Fast, accurate, and completely client-side percentage calculator with zero third-party telemetry.",
         "h1": "Percentage of a Number Calculator",
         "subtitle": "Answer the question: 'What is X% of Y?' instantly for any number, fraction, or financial amount.",
         "badge": "Core Percentage Tool",

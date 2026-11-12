@@ -5,7 +5,7 @@
 [![Cookies](https://img.shields.io/badge/Cookies-0-blue?style=flat-square)](https://quickpercent.othrys.be)
 [![WCAG AA](https://img.shields.io/badge/Accessibility-WCAG_AA-blueviolet?style=flat-square)](https://quickpercent.othrys.be)
 
-> Fast, private, client-side client-side percentage change, margin and VAT calculator. Runs 100% in your browser with zero server uploads, zero cookies, and zero tracking.
+> Fast, private, client-side client-side percentage change, margin and VAT calculator. Runs 100% in your browser with zero server uploads, zero cookies, and zero third-party tracking.
 
 ## Features
 - **100% Client-Side:** Files and confidential data never leave your device.
@@ -20,7 +20,7 @@ Use the live tool instantly without installing anything:
 
 # QuickPercent
 
-A private, browser-only percentage and discount calculator. Vite, vanilla TypeScript and semantic HTML/CSS. No runtime dependencies, remote fonts, analytics, cookies, APIs or persistence.
+A private, browser-only percentage and discount calculator. Vite, vanilla TypeScript and semantic HTML/CSS. No runtime dependencies, remote fonts, cookies, persistence, or third-party trackers (uses only cookieless first-party page-view counts via stats.othrys.be honoring Do Not Track / GPC, 90-day expiry).
 
 ## Develop
 
