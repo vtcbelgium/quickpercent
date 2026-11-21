@@ -1,0 +1,7 @@
+Name: QuickPercent
+URL: https://quickpercent.othrys.be/
+Description: Private, browser-only percentage change, margin, discount and VAT calculator. Runs 100% in your browser with zero tracking cookies, zero cloud uploads and no account required.
+LLMs-Txt: https://quickpercent.othrys.be/llms.txt
+Sitemap: https://quickpercent.othrys.be/sitemap.xml
+Protocol: public-read-only
+Privacy: zero-tracking-cookies, local-browser-execution, zero-cloud-uploads
